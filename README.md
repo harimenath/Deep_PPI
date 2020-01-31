@@ -5,7 +5,7 @@ We develop a framework to predict protein-protein interactions in humans. We lea
 
 ![PPI fingerprint](interactionFingerprint1.PNG)
 
-This repository includes a Jupyter / Google Colaboratory notebook for data download and processing, and model building and traning. It also includes the data used in the notebook, and trained models for the autoencoder, encoder, and CNN.
+This repository includes a [Jupyter / Google Colaboratory notebook](https://github.com/samsledje/Deep_PPI/blob/master/PPI_Intro2DeepLearning.ipynb) for data download and processing, and model building and traning. It also includes the data used in the notebook, and trained models for the autoencoder, encoder, and CNN.
 
 ## Model Details
 
