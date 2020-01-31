@@ -1,7 +1,7 @@
 # Deep_PPI
 ## Protein-Protein Interaction Prediction with Deep Learning
 
-We develop a framework to predict protein-protein interactions in humans. We learn a low-dimensional embedding of the protein sequences using an LSTM autoencoder, then use these embeddings to generate a unique "fingerprint" to represent the interaction. We then learn a deep CNN to predict interaction based on the fingerprints.
+We develop a framework to predict protein-protein interactions in humans. We learn a low-dimensional embedding of the protein sequences using an LSTM autoencoder, then use these embeddings to generate a unique "fingerprint" to represent the interaction. We then learn a deep CNN to predict interaction based on the fingerprints. Below is an image of one such fingerprint, the outer product of two 128-length protein sequence embeddings.
 
 ![PPI fingerprint](interactionFingerprint1.PNG)
 
@@ -17,7 +17,7 @@ The LSTM autoencoder (LSTM-AE) is based on [this](https://machinelearningmastery
 ![LSTM-AE](LSTM_AE_Arch.png)
 
 ### CNN
-The CNN is a deep convolutional network based on [this](https://machinelearningmastery.com/object-recognition-convolutional-neural-networks-keras-deep-learning-library/) tuturial by Jason Brownlee. It uses a series of Convolution, Max-Pool, and Dropout layers to learn hierarchical features of the fingerprint. It then uses a two dense layers, the final with two neurons and a softmax activation, to give the probabilities of interaction/no interaction.
+The CNN is a deep convolutional network based on [this](https://machinelearningmastery.com/object-recognition-convolutional-neural-networks-keras-deep-learning-library/) tutorial by Jason Brownlee. It uses a series of Convolution, Max-Pool, and Dropout layers to learn hierarchical features of the fingerprint. It then uses two dense layers, the final with two neurons and a softmax activation, to give the probabilities of interaction/no interaction.
 
 ![CNN](CNN_Arch.png)
 
