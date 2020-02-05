@@ -44,3 +44,4 @@ protein interactions should have more similarity between species due to universa
 - [A survey of current trends in computational predictions of protein-protein interactions](https://link.springer.com/article/10.1007/s11704-019-8232-z)
 - [Sequence-based prediction of protein protein interaction using a deep-learning algorithm](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1700-2)
 - [Simple sequence-based kernels do not predict protein-protein interactions](https://www.ncbi.nlm.nih.gov/pubmed/20801913)
+-[Learning protein sequence embeddings using information from structure](https://github.com/tbepler/protein-sequence-embedding-iclr2019)
