@@ -1,6 +1,8 @@
 # Deep_PPI
 ## Protein-Protein Interaction Prediction with Deep Learning
 
+This was developed as part of MIT 6.S191 - Intro to Deep Learning during IAP 2020.
+
 We develop a framework to predict protein-protein interactions in humans. We learn a low-dimensional embedding of the protein sequences using an LSTM autoencoder, then use these embeddings to generate a unique "fingerprint" to represent the interaction. We then learn a deep CNN to predict interaction based on the fingerprints. Below is an image of one such fingerprint, the outer product of two 128-length protein sequence embeddings.
 
 ![PPI fingerprint](img/interactionFingerprint1.PNG)
@@ -23,11 +25,11 @@ The CNN is a deep convolutional network based on [this](https://machinelearningm
 
 ## Evaluation
 
-After training the LSTM-AE for 5 epochs and the CNN for 50 epochs, I was able to achieve ~96% training accuracy, ~94% test accuracy, and >99.7 AUROC.
+After training the LSTM-AE for 5 epochs and the CNN for 50 epochs, I was able to achieve ~96% training accuracy, ~94% test accuracy, and >99.7 AUROC. This is pretty clearly an overfitting of the data.
 
 ![ROC Curve](img/PPI_AUC.PNG)
 
-However, I had less success when using the trained models to predict protein interactions from other species (yeast and fruit fly). The CNN AUROC was around 0.5 using the pretrained models, and only rose to about 0.57 using the pre-trained embedding, and retraining the CNN. I suspect that the other way around - retraining the embeddings, but keeping the trained CNN model - should have better performance, since protein sequences can differ between species due to evolutionary chance, but
+I had less success when using the trained models to predict protein interactions from other species (yeast and fruit fly). The CNN AUROC was around 0.5 using the pretrained models, and only rose to about 0.57 using the pre-trained embedding, and retraining the CNN. I suspect that the other way around - retraining the embeddings, but keeping the trained CNN model - should have better performance, since protein sequences can differ between species due to evolutionary chance, but
 protein interactions should have more similarity between species due to universal chemical properties.
 
 ![Yeast/Fly ROC Curve](img/yeastFly_AUC.png)
